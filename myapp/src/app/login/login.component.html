@@ -1,0 +1,61 @@
+<div class="flex flex-row h-screen">
+  <img src="loginPage.jpg" class="w-1/2 rounded-r-md shadow-sm" />
+  <div
+    class="w-full flex justify-center items-center bg-gradient-to-br from-yellow-200 via-pink-200 to-white flex-col"
+  >
+    <form
+      class="bg-white flex flex-col text-2xl p-10 gap-5 rounded-md"
+      [formGroup]="signInForm"
+      (ngSubmit)="login()"
+    >
+      <div class="flex flex-col items-center gap-2">
+        <h1 class="text-6xl font-bold">Sign In</h1>
+        <h1 class="text-sm text-gray-500">
+          Sign In to have an special food journey
+        </h1>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label>Email</label>
+        <input
+          type="text"
+          class="p-3 border border-pink-300 focus:outline-none focus:border-pink-700"
+          formControlName="email"
+          (onChanges)="formReseter()"
+        />
+        @if(!formValid){
+        <span class="text-sm text-red-400">Enter a valid email</span>
+        }
+      </div>
+      <div class="flex flex-col gap-2">
+        <label>Password</label>
+        <input
+          type="text"
+          class="p-3 border focus:outline-none border-pink-300 focus:border-pink-700"
+          formControlName="password"
+          (change)="formReseter()"
+          id="password"
+          name="password"
+        />
+        @if(!formValid){
+        <span class="text-sm text-red-400">Enter a valid password</span>
+        }
+      </div>
+      <div class="flex justify-between">
+        <button
+          class="bg-pink-500 hover:bg-pink-600 text-white p-3 rounded-md disabled:bg-pink-200"
+          type="submit"
+          [disabled]="!signInForm.valid"
+        >
+          Login
+        </button>
+        <a
+          class="bg-yellow-500 hover:bg-yellow-600 text-white p-3 rounded-md"
+          routerLink="/register"
+        >
+          Register
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
