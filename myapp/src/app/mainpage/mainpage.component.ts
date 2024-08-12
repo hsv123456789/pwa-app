@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './mainpage.component.html',
-  styleUrl: './mainpage.component.css'
+  styleUrl: './mainpage.component.css',
 })
 export class MainpageComponent {
-
+  username = localStorage.getItem('username');
 }

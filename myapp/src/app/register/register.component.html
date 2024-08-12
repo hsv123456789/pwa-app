@@ -3,7 +3,11 @@
   <div
     class="w-full flex justify-center items-center bg-gradient-to-br from-yellow-200 via-pink-200 to-white flex-col"
   >
-    <div class="bg-white flex flex-col text-2xl p-10 gap-5 rounded-md">
+    <form
+      class="bg-white flex flex-col text-2xl p-10 gap-5 rounded-md"
+      [formGroup]="RegisterForm"
+      (ngSubmit)="register()"
+    >
       <div class="flex flex-col items-center gap-2">
         <h1 class="text-6xl font-bold">Sign Up</h1>
         <h1 class="text-sm text-gray-500">
@@ -16,21 +20,66 @@
         <input
           type="text"
           class="p-3 border border-pink-300 focus:outline-none focus:border-pink-700"
+          formControlName="email"
         />
+        <span
+          *ngIf="
+            !RegisterForm.controls['email'].valid &&
+            RegisterForm.controls['email'].touched
+          "
+          class="text-sm text-red-400"
+          >Enter a valid email</span
+        >
+      </div>
+      <div class="flex flex-col gap-2">
+        <label>Username</label>
+        <input
+          type="text"
+          class="p-3 border border-pink-300 focus:outline-none focus:border-pink-700"
+          formControlName="username"
+        />
+        <span
+          *ngIf="
+            !RegisterForm.controls['username'].valid &&
+            RegisterForm.controls['username'].touched
+          "
+          class="text-sm text-red-400"
+          >Enter a valid email</span
+        >
       </div>
       <div class="flex flex-col gap-2">
         <label>Password</label>
         <input
           type="text"
           class="p-3 border focus:outline-none border-pink-300 focus:border-pink-700"
+          formControlName="password"
         />
+        <span
+          *ngIf="
+            !RegisterForm.controls['password'].valid &&
+            RegisterForm.controls['password'].touched
+          "
+          class="text-sm text-red-400"
+        >
+          Password must be 8-16 characters long, <br />
+          contain at least one uppercase letter, <br />
+          one lowercase letter,
+          <br />one number, and one special character.
+        </span>
       </div>
       <div class="flex flex-col gap-2">
         <label>Confirm Password</label>
         <input
           type="text"
           class="p-3 border focus:outline-none border-pink-300 focus:border-pink-700"
+          formControlName="confirmPassword"
         />
+        <span
+          *ngIf="RegisterForm.errors?.['passwordsMismatch'] && RegisterForm.controls['confirmPassword'].touched"
+          class="text-sm text-red-400"
+        >
+          Passwords do not match
+        </span>
       </div>
       <div class="flex justify-between">
         <a
@@ -40,11 +89,11 @@
           Login
         </a>
         <button
-          class="bg-yellow-500 hover:bg-yellow-600 text-white p-3 rounded-md"
+          class="bg-yellow-500 hover:bg-yellow-600 text-white p-3 rounded-md disabled:bg-yellow-200"
         >
           Register
         </button>
       </div>
-    </div>
+    </form>
   </div>
 </div>

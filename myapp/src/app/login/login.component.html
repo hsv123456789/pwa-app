@@ -37,9 +37,26 @@
           id="password"
           name="password"
         />
-        @if(!formValid){
-        <span class="text-sm text-red-400">Enter a valid password</span>
-        }
+        <span
+          *ngIf="
+            !signInForm.controls['password'].valid &&
+            signInForm.controls['password'].touched
+          "
+          class="text-sm text-red-400"
+        >
+          Password must be 8-16 characters long, <br />
+          contain at least one uppercase letter, <br />
+          one lowercase letter,
+          <br />one number, and one special character.
+        </span>
+        <span
+          *ngIf="
+            !signInForm.controls['email'].valid &&
+            signInForm.controls['email'].touched
+          "
+          class="text-sm text-red-400"
+          >Enter a valid email</span
+        >
       </div>
       <div class="flex justify-between">
         <button
