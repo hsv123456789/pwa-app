@@ -30,6 +30,7 @@ export class LoginComponent {
       this.formValid = false;
     }
     const loginData = this.signInForm.value;
+    console.log(loginData);
     this.httpClient
       .post('http://localhost:3000/api/user/login', loginData)
       .subscribe({

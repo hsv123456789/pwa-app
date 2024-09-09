@@ -2,6 +2,7 @@
   "routes": [
     "/",
     "/app",
-    "/register"
+    "/register",
+    "/shell"
   ]
 }
