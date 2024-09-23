@@ -7,7 +7,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient ,  HttpErrorResponse} from '@angular/common/http';
+import { IndexedDbService } from '../services/indexed-dbservice.service';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -17,12 +18,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent {
   formValid: boolean = true;
+  errorMessage : string = '';
   signInForm: FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
   });
   httpClient = inject(HttpClient);
   router = inject(Router);
+  indexedDbService = inject(IndexedDbService);
   login() {
     console.log('button clicked');
     console.log(this.signInForm.valid);
@@ -38,15 +41,23 @@ export class LoginComponent {
           console.log(response);
           localStorage.setItem('username', response.username);
           localStorage.setItem('token', response.token);
+          this.indexedDbService.setItem('username', response.username);
+          this.indexedDbService.setItem('token', response.token);
           this.router.navigate(['app']);
         },
-        error: (error) => {
-          console.log(error);
+        error: (error :  HttpErrorResponse) => {
+          console.error('Login error:', error);
+          if (error.status === 400) {
+            this.errorMessage = 'Invalid email or password';
+          } else {
+            this.errorMessage = 'An unexpected error occurred. Please try again.';
+          }
         },
       });
   }
 
   formReseter() {
     this.formValid = true;
+    this.errorMessage = ''
   }
 }

@@ -16,26 +16,30 @@
       </div>
 
       <div class="flex flex-col gap-2">
-        <label>Email</label>
+        <label for="email">Email</label>
         <input
           type="text"
+          id = "email"
+          name = "email"
           class="p-3 border border-pink-300 focus:outline-none focus:border-pink-700"
           formControlName="email"
+          autocomplete="email"
           (onChanges)="formReseter()"
         />
-        @if(!formValid){
-        <span class="text-sm text-red-400">Enter a valid email</span>
-        }
+        <span *ngIf="!signInForm.controls['email'].valid && signInForm.controls['email'].touched" class="text-sm text-red-400">
+          Enter a valid email
+        </span>
       </div>
       <div class="flex flex-col gap-2">
-        <label>Password</label>
+        <label for = "password">Password</label>
         <input
           type="text"
+          id = "password"
+          name = "password"
           class="p-3 border focus:outline-none border-pink-300 focus:border-pink-700"
           formControlName="password"
           (change)="formReseter()"
-          id="password"
-          name="password"
+          autocomplete="current-password"
         />
         <span
           *ngIf="
@@ -72,6 +76,9 @@
         >
           Register
         </a>
+      </div>
+      <div *ngIf="errorMessage" class="text-red-500 mt-2">
+        {{ errorMessage }}
       </div>
     </form>
   </div>

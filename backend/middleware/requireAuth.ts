@@ -28,6 +28,6 @@ export async function requireAuth(
     nextFunction();
   } catch (error: any) {
     console.log(error.message);
-    res.status(401).json({ error: "Request is not authorized" });
+    response.status(401).json({ error: "Request is not authorized" });
   }
 }

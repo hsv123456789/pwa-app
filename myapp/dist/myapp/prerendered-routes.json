@@ -1,8 +1,0 @@
-{
-  "routes": [
-    "/",
-    "/app",
-    "/register",
-    "/shell"
-  ]
-}
