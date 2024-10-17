@@ -1,0 +1,268 @@
+{
+    "New York": {
+      "Pizza Place": {
+        "Vegetarian": [
+          { "name": "Margherita Pizza", "price": 11 },
+          { "name": "Veggie Pizza", "price": 13 },
+          { "name": "Spinach Alfredo Pizza", "price": 12 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Pizza", "price": 14 },
+          { "name": "Vegan Supreme", "price": 15 },
+          { "name": "Mushroom & Artichoke Pizza", "price": 14 }
+        ],
+        "Keto": [
+          { "name": "Keto Pizza", "price": 16 },
+          { "name": "Cauliflower Crust Pizza", "price": 17 },
+          { "name": "Keto Pepperoni", "price": 15 }
+        ]
+      },
+      "Burger Joint": {
+        "Vegetarian": [
+          { "name": "Veggie Burger", "price": 9 },
+          { "name": "Grilled Portobello Burger", "price": 11 },
+          { "name": "Beyond Meat Burger", "price": 13 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Burger", "price": 12 },
+          { "name": "Tofu Burger", "price": 10 },
+          { "name": "Vegan BBQ Burger", "price": 13 }
+        ],
+        "Keto": [
+          { "name": "Keto Burger", "price": 14 },
+          { "name": "Lettuce-Wrapped Burger", "price": 13 },
+          { "name": "Bunless Bacon Cheeseburger", "price": 15 }
+        ]
+      },
+      "Vegan Delight": {
+        "Vegetarian": [
+          { "name": "Veggie Bowl", "price": 12 },
+          { "name": "Stir-fried Tofu Bowl", "price": 14 },
+          { "name": "Vegetarian Sushi", "price": 15 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Bowl", "price": 13 },
+          { "name": "Vegan Curry Bowl", "price": 14 },
+          { "name": "Vegan Ramen", "price": 16 }
+        ],
+        "Keto": [
+          { "name": "Keto Salad", "price": 12 },
+          { "name": "Avocado & Spinach Bowl", "price": 14 },
+          { "name": "Keto Tofu Stir Fry", "price": 15 }
+        ]
+      }
+    },
+    "Los Angeles": {
+      "Healthy Bites": {
+        "Vegetarian": [
+          { "name": "Vegetarian Wrap", "price": 10 },
+          { "name": "Quinoa Salad", "price": 12 },
+          { "name": "Stuffed Bell Peppers", "price": 11 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Wrap", "price": 12 },
+          { "name": "Vegan Burrito", "price": 13 },
+          { "name": "Vegan Taco Salad", "price": 12 }
+        ],
+        "Keto": [
+          { "name": "Keto Chicken Salad", "price": 14 },
+          { "name": "Keto Zoodle Bowl", "price": 13 },
+          { "name": "Keto Egg Salad", "price": 12 }
+        ]
+      },
+      "Taco Town": {
+        "Vegetarian": [
+          { "name": "Vegetarian Tacos", "price": 9 },
+          { "name": "Veggie Fajitas", "price": 11 },
+          { "name": "Grilled Veggie Quesadilla", "price": 12 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Tacos", "price": 10 },
+          { "name": "Tofu Tacos", "price": 11 },
+          { "name": "Vegan Nachos", "price": 12 }
+        ],
+        "Keto": [
+          { "name": "Keto Tacos", "price": 13 },
+          { "name": "Keto Beef Fajitas", "price": 15 },
+          { "name": "Keto Queso Dip", "price": 10 }
+        ]
+      },
+      "Green Eats": {
+        "Vegetarian": [
+          { "name": "Grilled Veggie Sandwich", "price": 10 },
+          { "name": "Caprese Salad", "price": 12 },
+          { "name": "Tomato Basil Soup", "price": 8 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Panini", "price": 11 },
+          { "name": "Vegan Caesar Salad", "price": 12 },
+          { "name": "Vegan Stuffed Peppers", "price": 14 }
+        ],
+        "Keto": [
+          { "name": "Keto Avocado Toast", "price": 13 },
+          { "name": "Keto Cobb Salad", "price": 14 },
+          { "name": "Keto Mushroom Soup", "price": 10 }
+        ]
+      }
+    },
+    "Chicago": {
+      "Deep Dish Delight": {
+        "Vegetarian": [
+          { "name": "Deep Dish Veggie Pizza", "price": 16 },
+          { "name": "Spinach & Ricotta Pizza", "price": 15 },
+          { "name": "Vegetable Lasagna", "price": 13 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Deep Dish", "price": 17 },
+          { "name": "Vegan Spinach Pizza", "price": 15 },
+          { "name": "Vegan Ziti", "price": 14 }
+        ],
+        "Keto": [
+          { "name": "Keto Crust Deep Dish", "price": 18 },
+          { "name": "Keto Spinach Pizza", "price": 16 },
+          { "name": "Keto Lasagna", "price": 17 }
+        ]
+      },
+      "Hotdog Haven": {
+        "Vegetarian": [
+          { "name": "Veggie Hotdog", "price": 9 },
+          { "name": "Grilled Veggie Sausage", "price": 11 },
+          { "name": "Falafel Dog", "price": 10 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Hotdog", "price": 10 },
+          { "name": "Tofu Dog", "price": 9 },
+          { "name": "Vegan Chili Dog", "price": 11 }
+        ],
+        "Keto": [
+          { "name": "Keto Hotdog", "price": 13 },
+          { "name": "Lettuce Wrap Dog", "price": 12 },
+          { "name": "Keto Bratwurst", "price": 14 }
+        ]
+      },
+      "Salad Station": {
+        "Vegetarian": [
+          { "name": "Greek Salad", "price": 10 },
+          { "name": "Caprese Salad", "price": 12 },
+          { "name": "Vegetarian Caesar", "price": 11 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Greek Salad", "price": 11 },
+          { "name": "Vegan Power Bowl", "price": 14 },
+          { "name": "Vegan Caesar Salad", "price": 12 }
+        ],
+        "Keto": [
+          { "name": "Keto Avocado Salad", "price": 13 },
+          { "name": "Keto Spinach & Chicken Salad", "price": 15 },
+          { "name": "Keto Tuna Salad", "price": 14 }
+        ]
+      }
+    },
+    "San Francisco": {
+      "Sushi World": {
+        "Vegetarian": [
+          { "name": "Cucumber Roll", "price": 7 },
+          { "name": "Avocado Roll", "price": 8 },
+          { "name": "Vegetarian Sushi Platter", "price": 15 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Sushi", "price": 14 },
+          { "name": "Tofu Roll", "price": 9 },
+          { "name": "Vegan Miso Soup", "price": 6 }
+        ],
+        "Keto": [
+          { "name": "Keto Salmon Roll", "price": 12 },
+          { "name": "Keto Sashimi Platter", "price": 18 },
+          { "name": "Keto Seaweed Salad", "price": 8 }
+        ]
+      },
+      "Pasta Paradise": {
+        "Vegetarian": [
+          { "name": "Vegetarian Pasta Primavera", "price": 13 },
+          { "name": "Veggie Alfredo", "price": 14 },
+          { "name": "Penne Arrabiata", "price": 12 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Pasta", "price": 14 },
+          { "name": "Vegan Pesto Pasta", "price": 15 },
+          { "name": "Vegan Lasagna", "price": 16 }
+        ],
+        "Keto": [
+          { "name": "Keto Zucchini Noodles", "price": 12 },
+          { "name": "Keto Shrimp Scampi", "price": 18 },
+          { "name": "Keto Alfredo", "price": 14 }
+        ]
+      },
+      "Burger Bliss": {
+        "Vegetarian": [
+          { "name": "Veggie Burger", "price": 11 },
+          { "name": "Black Bean Burger", "price": 10 },
+          { "name": "Mushroom Burger", "price": 12 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Burger", "price": 12 },
+          { "name": "Vegan Chickpea Burger", "price": 13 },
+          { "name": "Vegan BBQ Burger", "price": 14 }
+        ],
+        "Keto": [
+          { "name": "Keto Burger", "price": 14 },
+          { "name": "Keto Avocado Burger", "price": 15 },
+          { "name": "Keto Lettuce Wrap Burger", "price": 16 }
+        ]
+      }
+    },
+    "Miami": {
+      "Tropical Treats": {
+        "Vegetarian": [
+          { "name": "Tropical Veggie Salad", "price": 12 },
+          { "name": "Fruit & Veggie Bowl", "price": 11 },
+          { "name": "Avocado Toast", "price": 10 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Tropical Bowl", "price": 13 },
+          { "name": "Vegan Smoothie Bowl", "price": 14 },
+          { "name": "Vegan Fruit Salad", "price": 12 }
+        ],
+        "Keto": [
+          { "name": "Keto Tropical Salad", "price": 14 },
+          { "name": "Keto Coconut Shrimp", "price": 16 },
+          { "name": "Keto Avocado Bowl", "price": 13 }
+        ]
+      },
+      "Beachside Bites": {
+        "Vegetarian": [
+          { "name": "Grilled Veggie Tacos", "price": 11 },
+          { "name": "Veggie Burrito", "price": 12 },
+          { "name": "Vegetarian Nachos", "price": 10 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Burrito", "price": 12 },
+          { "name": "Vegan Tacos", "price": 11 },
+          { "name": "Vegan Nachos", "price": 10 }
+        ],
+        "Keto": [
+          { "name": "Keto Grilled Shrimp Tacos", "price": 15 },
+          { "name": "Keto Burrito Bowl", "price": 14 },
+          { "name": "Keto Nachos", "price": 12 }
+        ]
+      },
+      "Caribbean Delights": {
+        "Vegetarian": [
+          { "name": "Vegetarian Curry", "price": 12 },
+          { "name": "Veggie Stew", "price": 11 },
+          { "name": "Plantain & Bean Bowl", "price": 13 }
+        ],
+        "Vegan": [
+          { "name": "Vegan Curry", "price": 14 },
+          { "name": "Vegan Stew", "price": 13 },
+          { "name": "Vegan Jerk Tofu", "price": 15 }
+        ],
+        "Keto": [
+          { "name": "Keto Jerk Chicken", "price": 16 },
+          { "name": "Keto Coconut Stew", "price": 17 },
+          { "name": "Keto Grilled Snapper", "price": 18 }
+        ]
+      }
+    }
+  }
+  

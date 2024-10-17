@@ -8,7 +8,8 @@ const expressAplication: Express = express();
 
 expressAplication.use(cors());
 const corsOptions = {
-  origin: ['http://localhost:4200','http://127.0.0.1:4200'], // Explicitly set the allowed origin
+  //origin: ['http://localhost:4200','http://127.0.0.1:4200'], // Explicitly set the allowed origin
+  origin: '*', //
   credentials: true, // Allow credentials to be included in requests
   optionsSuccessStatus: 200 // For legacy browser support
 };

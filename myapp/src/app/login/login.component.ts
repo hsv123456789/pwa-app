@@ -34,15 +34,21 @@ export class LoginComponent {
     }
     const loginData = this.signInForm.value;
     console.log(loginData);
+
+    const apiBaseUrl = window.location.hostname === 'localhost'
+    ? 'http://localhost:3000/api/user'
+    : 'http://192.168.200.148:3000/api/user';
+
     this.httpClient
+      //.post(`${apiBaseUrl}/login`, loginData)
       .post('http://localhost:3000/api/user/login', loginData)
       .subscribe({
         next: (response: any) => {
           console.log(response);
           localStorage.setItem('username', response.username);
           localStorage.setItem('token', response.token);
-          this.indexedDbService.setItem('username', response.username);
-          this.indexedDbService.setItem('token', response.token);
+          this.indexedDbService.setAuthItem('username', response.username);
+          this.indexedDbService.setAuthItem('token', response.token);          
           this.router.navigate(['app']);
         },
         error: (error :  HttpErrorResponse) => {
